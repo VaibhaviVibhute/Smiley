@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley task</title>
+</head>
+<style>
+    *{
+        margin: 0px auto;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    #parent{
+        height: 700px;
+        width: 700px;
+        border: 1px solid;
+        border-radius: 50%;background-color: yellow;
+    }
+    #eyes{
+        height: 300px;
+        width: 550px;
+        /* border: 1px solid black; */
+        margin-top: 60px;
+        display: flex;
+    }
+    .eye{
+        height: 250px;
+        width: 250px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 20px;
+        animation-duration: 2s;
+        animation-name: circle;
+        animation-iteration-count: infinite;
+    }
+    #mouth{
+        height: 180px;
+        width: 320px;
+        /* border: 1px solid black; */
+        background-color:rgb(241, 55, 55);
+        margin-top: 60px;
+        /* transform: translateX(-50%); */
+        border-radius: 2px 2px 150px 150px;
+    }
+    .eyeball{
+        height: 75px;
+        width: 75px;
+        border: 1px solid black;
+        border-radius: 50%;
+        translate: 90px 20px;
+        background-color: black;
+        margin-top: 80px;
+    }
+    @keyframes circle{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    .eye:hover{
+        height: 350px;
+        width: 400px;
+    }
+    #mouth:hover{
+        height: 250px;
+        width: 320px;
+        background-color: rgb(229, 85, 85);
+    }
+</style>
+<body>
+    <div id="parent">
+        <div id="eyes">
+            <div id="eye1" class="eye">
+                <div id="eyeball1" class="eyeball"></div>
+            </div>
+            <div id="eye2" class="eye">
+                <div id="eyeball2" class="eyeball"></div>
+            </div>
+        </div>
+        <div id="mouth"></div>
+    </div>
+</body>
+</html>
